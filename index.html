@@ -9,14 +9,16 @@
 <body>
   <div id="app">
     <h1 class="titulo">CONTADOR DE PERSONAS</h1>
-    <p class="subtitulo">Paso 1: elige o haz una foto</p>
+    <p class="subtitulo">Elige o haz una foto para estimar</p>
 
     <div id="vista">
       <p id="placeholder">Aquí aparecerá la imagen</p>
       <img id="imagen" alt="Foto seleccionada" hidden />
+      <canvas id="canvas" hidden></canvas>
     </div>
 
     <p id="resultado">Personas estimadas: —</p>
+    <p id="estado" class="estado"></p>
 
     <div class="botones">
       <label class="btn" for="input-foto">Elegir foto</label>
@@ -26,9 +28,20 @@
       <input id="input-camara" type="file" accept="image/*" capture="environment" hidden />
     </div>
 
-    <p class="ayuda">Aún no cuenta personas. Solo carga y muestra la foto.</p>
+    <p class="ayuda">
+      Estimación automática. En multitudes densas el número suele ser menor que el real.
+    </p>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2.9/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.1.0"></script>
   <script src="script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js")
+        .then(() => console.log("SW registrado"))
+        .catch((e) => console.log("Error SW:", e));
+    }
+  </script>
 </body>
 </html>
