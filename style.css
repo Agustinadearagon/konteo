@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+body {
+  min-height: 100dvh;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 16px 32px;
+}
+
+#app {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+.subtitulo {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin-bottom: 18px;
+}
+
+#vista {
+  width: 100%;
+  min-height: 240px;
+  background: #1e293b;
+  border: 2px dashed #334155;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+#placeholder {
+  color: #64748b;
+  font-size: 0.95rem;
+  padding: 16px;
+}
+
+#imagen {
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  display: block;
+}
+
+#resultado {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fbbf24;
+  margin-bottom: 18px;
+  min-height: 1.5em;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  display: block;
+  padding: 14px 10px;
+  background: #0ea5e9;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-camara {
+  background: #22c55e;
+}
+
+.btn:active {
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
+.ayuda {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.4;
+}
