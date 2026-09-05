@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Contador de Personas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1 class="titulo">CONTADOR DE PERSONAS</h1>
+    <p class="subtitulo">Paso 1: elige o haz una foto</p>
+
+    <div id="vista">
+      <p id="placeholder">Aquí aparecerá la imagen</p>
+      <img id="imagen" alt="Foto seleccionada" hidden />
+    </div>
+
+    <p id="resultado">Personas estimadas: —</p>
+
+    <div class="botones">
+      <label class="btn" for="input-foto">Elegir foto</label>
+      <input id="input-foto" type="file" accept="image/*" hidden />
+
+      <label class="btn btn-camara" for="input-camara">Usar cámara</label>
+      <input id="input-camara" type="file" accept="image/*" capture="environment" hidden />
+    </div>
+
+    <p class="ayuda">Aún no cuenta personas. Solo carga y muestra la foto.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
